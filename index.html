@@ -7,6 +7,10 @@
 #v{
 background:url("http://i2.cdn.cnn.com/cnnnext/dam/assets/160303230032-ecuador-volcano-tungurahua-super-169.jpg");
 }
+#video{
+background-image:url("http://i2.cdn.cnn.com/cnnnext/dam/assets/160303230032-ecuador-volcano-tungurahua-super-169.jpg");
+
+}
 body{
 background-color:#1E1E1E;
 }
@@ -18,7 +22,11 @@ background-color:#1E1E1E;
 <source src="video.mp4" type="video/mp4" controls>
 Your browser sucks, it does not support video.</video>
 </div>
-
+<div id="gifwrapper">
+<video id="video" width="320" height="240" loop>
+<source src="https://zippy.gfycat.com/DeadlyOrneryGuineapig.webm" type="video/webm">
+</video>
+</div>
 <script>
 var v = $('#v');
        $(v).on('canplay', function(){
@@ -28,6 +36,16 @@ var v = $('#v');
              $(this).get(0).pause();
           })
        });
+var figure= $('#video').hover( hoverVideo, hideVideo );
+
+function hoverVideo(e) {  
+     $("#video").get(0).play(); 
+}
+
+function hideVideo(e) {
+     $("#video").get(0).pause(); 
+}
+
 </script>
 </body>
 </html>
