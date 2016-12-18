@@ -4,9 +4,8 @@
 <title>Super video</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <style>
-#v{}
-#video{
-
+#v{
+background:url("http://i2.cdn.cnn.com/cnnnext/dam/assets/160303230032-ecuador-volcano-tungurahua-super-169.jpg");
 }
 body{
 background-color:#1E1E1E;
@@ -15,21 +14,35 @@ background-color:#1E1E1E;
 </head>
 <body>
 <div id="videowrappper">
-<video width="320" height="240" id="v" muted>
+<video width="320" height="240" id="v" controls>
 <source src="video.mp4" type="video/mp4" controls>
 Your browser sucks, it does not support video.</video>
 </div>
-
+<div id="gifwrapper">
+<video width="320" height="240">
+<source src="" type="heman.gif">
+</video>
+</div>
 <script>
 var v = $('#v');
        $(v).on('canplay', function(){
           $(v).mouseenter(function(){
-	     $('#v').get(0).currentTime=0;
              $(this).get(0).play();
           }).mouseleave(function(){
              $(this).get(0).pause();
           })
        });
+var gif = $(".video");
+gifhover( hoverVideo, hideVideo );
+
+function hoverVideo(e) {  
+    $('video', this).get(0).play(); 
+}
+
+function hideVideo(e) {
+    $('video', this).get(0).pause(); 
+}
+
 </script>
 </body>
 </html>
