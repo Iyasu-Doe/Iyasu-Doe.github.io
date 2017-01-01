@@ -1,35 +1,26 @@
 <!doctype html>
 <html>
 <head>
-<title>Super video</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<style>
-#v{}
-#video{
+<title>Peasants, everywhere...</title>
+<script src="main.js"></script>
 
-}
-body{
-background-color:#1E1E1E;
-}
-</style>
+<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-<div id="videowrappper">
-<video width="320" height="240" id="v" muted>
-<source src="video.mp4" type="video/mp4" controls>
-Your browser sucks, it does not support video.</video>
+
+<div id="topdiv" class="scroll">
+<p class="fancy">A quick message...</p>
 </div>
 
-<script>
-var v = $('#v');
-       $(v).on('canplay', function(){
-          $(v).mouseenter(function(){
-	     $('#v').get(0).currentTime=0;
-             $(this).get(0).play();
-          }).mouseleave(function(){
-             $(this).get(0).pause();
-          })
-       });
-</script>
+<p id="maintext">I have a webpage and you don't...</p>
+
+<div id="bottomdiv" class="scroll">
+<p id="endtext" class="fancy">So suck it, peasants.</p>
+</div>
+
+<div id="rotdiv"></div>
+<div id="rotdiv2"></div>
+
 </body>
 </html>
